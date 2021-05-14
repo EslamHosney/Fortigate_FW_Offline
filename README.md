@@ -30,7 +30,9 @@ from Fortinet_FW import Fortinet
 
 * Install python dependencies
 * create an object from Fortinet class with teh required data to be used in your code
+'''
   firewall = Fortinet(name,ip,username,password,ReadFile('SF.txt'),ReadFile('SF_routes.txt'))
+'''
   name,ip,username,password no manadatory could be replaced by empty str "" given the _configurationfile.txt and the _routes.txt are provided
 
 
