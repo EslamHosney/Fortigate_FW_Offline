@@ -34,6 +34,7 @@ from Fortinet_FW import Fortinet
   firewall = Fortinet(name,ip,username,password,ReadFile('FW_Name.txt'),ReadFile('FW_Name_routes.txt'))
 ```
   name,ip,username,password no manadatory could be replaced by empty str "" given the _configurationfile.txt and the _routes.txt are provided
+  [extract_firewall_config](https://github.com/EslamHosney/extract_firewall_config.git) could be used to extract firewall configuration
 
 
 ## Environment
