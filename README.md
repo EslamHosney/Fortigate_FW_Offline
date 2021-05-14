@@ -6,33 +6,32 @@ This project is created to provide a Python class providing most of the syntax t
 To clone and run the examples you'll need:
 * [Python2](https://www.python.org/downloads/)
 * [pip](https://pip.pypa.io/en/stable/installing/)
-* [netmiko](https://pypi.org/project/netmiko/)
+* [netaddr](https://pypi.org/project/netaddr/)
 
 From your command line:
 
 ```bash
 
 # Clone this repository
-$ git clone https://github.com/EslamHosney/extract_firewall_config.git
+$ git clone https://github.com/EslamHosney/Fortigate_FW_Offline.git
 
 # Go into the repository
-$ cd gatepy
 
 # Install dependencies
 $ pip install -r requirements.txt
 
-# Edit FirewallsData.csv to your Fortigate/SRX/Netscreen details (IP and credentials)
-$ vim FirewallsData.csv
+# use the below syntax to import Fortinet class to be used
+from Fortinet_FW import Fortinet
 
-# Run the .py file
-$ python extract_firewalls_configuration.py
 ```
 
 
 ## Prerequisites
 
-* Change IP and credentials on FirewallsData.csv file
 * Install python dependencies
+* create an object from Fortinet class with teh required data to be used in your code
+  firewall = Fortinet(name,ip,username,password,ReadFile('SF.txt'),ReadFile('SF_routes.txt'))
+  name,ip,username,password no manadatory could be replaced by empty str "" given the _configurationfile.txt and the _routes.txt are provided
 
 
 ## Environment
@@ -41,8 +40,6 @@ Tested on:
 * Windows X 10
 * python 2.7
 * FortiOS 6.0
-* Netscreen
-* SRX
 
 It should work on different environments, just keep in mind the versions above.
 
